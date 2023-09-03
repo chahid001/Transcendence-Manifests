@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: transcendence-back-app
-          image: soufiane01/transcendence_back:27
+          image: soufiane01/transcendence_back:31
           ports:
             - containerPort: 9000
