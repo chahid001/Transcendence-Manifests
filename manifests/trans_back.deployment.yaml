@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transcendence-app
+  namespace: transcendence
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: transcendence
+  template:
+    metadata:
+      labels:
+        app: transcendence
+    spec:
+      containers:
+        - name: transcendence-back-app
+          image: soufiane01/transcendence_back:27
+          ports:
+            - containerPort: 9000
